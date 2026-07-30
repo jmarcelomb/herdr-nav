@@ -1,0 +1,45 @@
+id = "herdr-fast-nav"
+name = "Fast Nav"
+version = "0.1.0"
+min_herdr_version = "0.7.0"
+description = "Fast alt-arrow pane/tab/workspace navigation, talking to the herdr socket directly instead of shelling out per step"
+platforms = ["linux", "macos"]
+
+[[build]]
+command = ["cargo", "build", "--release", "--locked"]
+
+[[actions]]
+id = "nav-left"
+title = "Navigate left (pane, then tab)"
+contexts = ["pane"]
+command = ["sh", "-c", "exec \"$HERDR_PLUGIN_ROOT/target/release/herdr-fast-nav\" nav left"]
+
+[[actions]]
+id = "nav-right"
+title = "Navigate right (pane, then tab)"
+contexts = ["pane"]
+command = ["sh", "-c", "exec \"$HERDR_PLUGIN_ROOT/target/release/herdr-fast-nav\" nav right"]
+
+[[actions]]
+id = "tab-left"
+title = "Navigate left (tab within workspace, then adjacent workspace)"
+contexts = ["workspace", "pane"]
+command = ["sh", "-c", "exec \"$HERDR_PLUGIN_ROOT/target/release/herdr-fast-nav\" spatial-tab left"]
+
+[[actions]]
+id = "tab-right"
+title = "Navigate right (tab within workspace, then adjacent workspace)"
+contexts = ["workspace", "pane"]
+command = ["sh", "-c", "exec \"$HERDR_PLUGIN_ROOT/target/release/herdr-fast-nav\" spatial-tab right"]
+
+[[actions]]
+id = "workspace-left"
+title = "Cycle to previous workspace"
+contexts = ["workspace", "pane"]
+command = ["sh", "-c", "exec \"$HERDR_PLUGIN_ROOT/target/release/herdr-fast-nav\" cycle-workspace left"]
+
+[[actions]]
+id = "workspace-right"
+title = "Cycle to next workspace"
+contexts = ["workspace", "pane"]
+command = ["sh", "-c", "exec \"$HERDR_PLUGIN_ROOT/target/release/herdr-fast-nav\" cycle-workspace right"]

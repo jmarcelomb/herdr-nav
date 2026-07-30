@@ -1,0 +1,17 @@
+[package]
+name = "herdr-fast-nav"
+version = "0.1.0"
+edition = "2024"
+description = "Fast alt-arrow pane/workspace navigation for herdr, over a single persistent socket connection"
+license = "MIT"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+lto = true
+strip = true
