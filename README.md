@@ -1,4 +1,4 @@
-# herdr-fast-nav
+# herdr-nav
 
 Pane, tab, and workspace navigation plugin for [herdr](https://herdr.dev).
 
@@ -10,7 +10,7 @@ compiled binary that talks to herdr's local socket API directly. See
 ## Install
 
 ```sh
-herdr plugin link /path/to/herdr-fast-nav
+herdr plugin link /path/to/herdr-nav
 cargo build --release --locked   # link does not run build steps
 ```
 
@@ -37,32 +37,32 @@ Add to `~/.config/herdr/config.toml` (reload with
 [[keys.command]]
 key = "alt+left"
 type = "plugin_action"
-command = "herdr-fast-nav.nav-left"
+command = "herdr-nav.nav-left"
 
 [[keys.command]]
 key = "alt+right"
 type = "plugin_action"
-command = "herdr-fast-nav.nav-right"
+command = "herdr-nav.nav-right"
 
 [[keys.command]]
 key = "alt+shift+left"
 type = "plugin_action"
-command = "herdr-fast-nav.tab-left"
+command = "herdr-nav.tab-left"
 
 [[keys.command]]
 key = "alt+shift+right"
 type = "plugin_action"
-command = "herdr-fast-nav.tab-right"
+command = "herdr-nav.tab-right"
 
 [[keys.command]]
 key = "ctrl+alt+left"
 type = "plugin_action"
-command = "herdr-fast-nav.workspace-left"
+command = "herdr-nav.workspace-left"
 
 [[keys.command]]
 key = "ctrl+alt+right"
 type = "plugin_action"
-command = "herdr-fast-nav.workspace-right"
+command = "herdr-nav.workspace-right"
 ```
 
 ## How it's fast

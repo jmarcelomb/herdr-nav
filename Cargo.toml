@@ -1,8 +1,8 @@
 [package]
-name = "herdr-fast-nav"
+name = "herdr-nav"
 version = "0.1.0"
 edition = "2024"
-description = "Fast alt-arrow pane/workspace navigation for herdr, over a single persistent socket connection"
+description = "Pane, tab, and workspace navigation plugin for herdr"
 license = "MIT"
 
 [lints.rust]

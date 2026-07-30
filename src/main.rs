@@ -41,7 +41,7 @@ fn main() {
             (mode.as_str(), direction.as_str())
         }
         _ => {
-            eprintln!("usage: herdr-fast-nav <nav|spatial-tab|cycle-workspace> <left|right>");
+            eprintln!("usage: herdr-nav <nav|spatial-tab|cycle-workspace> <left|right>");
             std::process::exit(2);
         }
     };
