@@ -1,6 +1,6 @@
 # herdr-fast-nav
 
-Fast alt-arrow pane/tab/workspace navigation for [herdr](https://herdr.dev).
+Pane, tab, and workspace navigation plugin for [herdr](https://herdr.dev).
 
 Replaces shell-script keybindings that shell out to the `herdr` CLI
 per navigation step (each a fresh process spawn) with a single
